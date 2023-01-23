@@ -6,8 +6,8 @@ Thesis: An Application of Renyi Divergence Variational Inference to Structural E
 
 As of Jan 2023, the repo has 2 parts, do_VI and eval_VI.
 
+#####
 Part 1: do_VI 
-################
 
 The code required to apply black box Variational Inference to the single factor CFA model. Two key objects are used: 
 
@@ -32,7 +32,7 @@ Given 1. and 2, an sem_model object takes in data $x$ and outputs the value of a
 
 After optimisation, the sem_model object (and its optimised variational qvar attribute) is used for Bayesian inference.
 
-################################
+####
 Part 2: eval_VI
 
 The code required to evaluate and visualise the performance of a black box Variational Inference algorithm. This is done by comparing the optimized variational distribution with MCMC approximations of the posterior. 
