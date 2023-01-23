@@ -10,6 +10,7 @@ Part 1: do_VI
 The code required to apply black box Variational Inference to the single factor CFA model. Two key objects are used: 
 
 -qvar objects
+
 -sem_model object 
 
 A qvar object is basically a wrapper around a Pytorch distribution object, and represents the variational distribution $q_{\phi}(\theta)$ on the model parameters $\theta$. Any qvar object does two things: 
@@ -20,6 +21,7 @@ b. Given the variational parameters $\phi$, and the qvar object's innate Pytorch
 An sem_model object contains the two essential ingredients for applying Variational Inference to the 1 factor Bayesian CFA model: 
 1. Log-Likelihood and Prior
 Given the current value of CFA model parameters $\theta$ (stored as an attribute), calculates log-likelihood and log-prior for the 1 factor CFA model
+
 2. Entropy and Variational Distributions 
 The sem_model object contains, as an attribute, a sequence of qvar objects which encodes the structure of the variational distributions we wish to use, to approximate the true, uncomputable posterior distribution $p(\theta | x)$. For the 1 factor CFA model, we use a mean field assumption (i.e. all components of the model parameter $\theta$ are independent), with component-wise distributions being either Inverse Gamma or Normal. 
 
