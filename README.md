@@ -16,6 +16,7 @@ The code required to apply black box Variational Inference to the single factor 
 A qvar object is basically a wrapper around a Pytorch distribution object, and represents the variational distribution $q_{\phi}(\theta)$ on the model parameters $\theta$. Any qvar object does two things: 
 
 a. Holds the variational parameters $\phi$, which are stored as gradient-tracking tensors.
+
 b. Given the variational parameters $\phi$, and the qvar object's innate Pytorch distribution (e.g. Normal, Inverse-Gamma), the qvar object produces a random sample of $\theta$ realisations from the resultant $q_{\phi}(\theta)$ distribution. My thesis implements VI by using reparameterisation gradients, so all qvar objects use the .rsample command found in Pytorch.
 
 An sem_model object contains the two essential ingredients for applying Variational Inference to the 1 factor Bayesian CFA model: 
