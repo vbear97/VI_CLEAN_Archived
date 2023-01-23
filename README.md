@@ -1,6 +1,8 @@
-This repository provides all Python code required to apply black box Renyi Divergence Variational Inference to a single factor Confirmatory Factor Analysis (CFA) model with mean-field assumption, as investigated in my master's thesis. The observed data used is visual perception tests results from the the Holzinger and Swineford (1939) dataset. 
+This repository provides Python code required to apply black box Renyi Divergence Variational Inference to a single factor Confirmatory Factor Analysis (CFA) model with mean-field assumption, as investigated in my master's thesis. The observed data used is visual perception tests results from the the Holzinger and Swineford (1939) dataset. 
 
-NOTE: As of Jan 2023, efforts are being made to develop code for applying black box Renyi Divergence VI to more complex Structural Equation Models (SEM). The single factor CFA is the most elementary of SEM models. 
+NOTE 1: As of Jan 2023, efforts are being made to develop code for applying black box Renyi Divergence VI to more complex Structural Equation Models (SEM). The single factor CFA is the most elementary of SEM models. 
+
+NOTE 2: As of Jan 2023, some objects used in this code are artefact objects (pickling is used). By Feb 2023, this will be amended.
 
 Thesis: An Application of Renyi Divergence Variational Inference to Structural Equation Modelling. 
 
