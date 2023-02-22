@@ -4,7 +4,7 @@ var_dist.py || Implements variational distributions $q_{\phi}(\theta)$.
 
 single_cfa_inputs.py || Initialises required inputs for the main function do_vi(): imports statistical data $\mathbb{x}$ from Holzinger and Swineford (1939) dataset, initialises prior distribution hyperparameters, etc. 
 
-single_cfa_model.py || Defines the object sem_model(), which encodes the prior distribution $p(\theta) $ and likelihood distribution $p(\theta | x) $of the 1 factor CFA model, PLUS variational distribution $q_{\phi}(\theta)$ that I have decided to use to approximate the intractable posterior distribution $p(\theta| x)$. The sem_model object holds variational parameters $\phi$, which are optimized in the variational inference algorithm. 
+single_cfa_model.py || Defines the object sem_model(), which encodes the prior distribution $p(\theta)$ and likelihood distribution $p(x | \theta) $of the 1 factor CFA model, PLUS variational distribution $q_{\phi}(\theta)$ that is used to approximate the intractable posterior distribution $p(\theta| x)$. The sem_model object holds variational parameters $\phi$, which are optimized in the variational inference algorithm. 
 
 single_cfa_optim.py || Code required to optimize an sem_model object. The primary function is do_vi(), which allows the user to: 
 
